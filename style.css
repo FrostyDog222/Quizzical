@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: AkiraExpanded;
+    src: url('../fonts/AkiraExpanded.otf');
+}
+
+@font-face {
+    font-family: Felidae;
+    src: url('../fonts/Felidae.ttf')
+}
+
+body {
+    margin: 0;
+    font-weight: bold;
+    background-image: url("../images/background1");
+    background: cover;
+    color: #293264;
+    font-family: AkiraExpanded, sans-serif;
+}
+
+hr {
+    margin: 2em 0 2.2em 0;
+    width: 100%;
+    color:rgba(0, 0, 0, 0.1)
+}
+
+/* Start Quizz */
+
+.startQuizz {
+    text-align: center;
+    margin: 5em auto;   
+}
+
+.startQuizz > p{
+    margin: 1em;
+}
+
+select,
+input{
+    width: 20%;
+    margin: 0.2em 0 1em 0;
+}
+
+button {
+    background-color: #4D5B9E;
+    color: whitesmoke;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+button:hover {background-color: #717db8}
+
+button:active {
+  background-color: #717db8;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
+
+/* Questions */
+
+.quizzContainer {
+    display: block;
+    margin: 5em auto;
+    width: 50%;
+    caret-color: transparent;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: rgba(255, 252, 252, 0.7);
+    border-radius: 20px;
+    padding: 2em;
+}
+
+.questionContainer {
+    width: 100%;
+}
+
+/* Answers Container */
+.answer {
+    border: 2px solid #4D5B9E;
+    border-radius: 10px;
+    display: inline-block;
+    margin : 0 0.5em 0 0;
+    padding: 0.2em 1em;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.answersContainer{
+    display: inline;
+}
+
+.answersContainer > p {
+    margin: 0.5em 0.5em 0 0;
+}
+
+.selected {
+    background-color: #D6DBF5 ;
+
+}
+
+.incorrect {
+    background-color: #F8BCBC;
+}
+
+.correct {
+    background-color: #94D7A2;
+}
+/* End game */
+
+.endGame {
+    display: flex;
+    align-items: center;
+    margin : 2em 0;
+}
+
+.endGameText {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.buttonsDiv {
+    display: flex;
+}
+
+.buttonsDiv > button {
+    margin: 0 0 0 2em;
+    padding: 1em 2em;
+}
+
+/* Loading */
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loadingInsideContainer {
+    display: block;
+}
+
+.loadingSpinner {
+    margin: auto;
+    border-radius: 50%;
+    border: 10px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #3498db;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s ease-in-out infinite; 
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingMessage {
+    font-size: 20px;
+    text-align: center;
+    margin: 3em;
+}
+
+/* Start  Game and Options*/
+.startBigContainer{
+    margin: 2em 0;
+}
+
+.startContainer {
+    background-color: whitesmoke;
+    width: 700px;
+    padding: 1.5em 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.logo {
+    width: 600px;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 0 3.5em 0 ;
+    padding: 0;
+}
+
+form {
+    margin: 0;
+}
+
+.startContainer > p {
+    margin: 0 0 1.5em;
+}
+
+input {
+    width: 180px;
+}
+
+select {
+    width: 25rem;
+    font-family: sans-serif;
+    padding: 0.2em;
+    margin: 0 0 1.5em;
+}
+
+.star {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 0 .5em 22em; 
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+}
+
+.star > img {
+    width: 30px;
+    height: 30px;
+    margin: 0 .5em 0 .8em;
+}
+
+.reverseImg {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+  
+.scoreText {
+    margin: 0;
+}
+  
+.score {
+    margin: 0;
+}
+
+.startQuizzBtn {
+    margin: 2em 0 0 0;
+}
+
+/* Media querry */
+
+@media (max-width: 1200px) {
+
+    /* Start  Game and Options*/
+    .startBigContainer{
+        margin: 1em .5em;
+    }
+
+    .startContainer {
+        width: 30rem;
+    }
+
+    .logo {
+        width: 25rem;
+        height: 100%;
+        object-fit: contain;
+        margin: 0 0 3.5em 0 ;
+        padding: 0;
+    }
+
+
+    input {
+        width: 180px;
+    }
+
+    select {
+        width: 20rem;
+        font-family: sans-serif;
+        padding: 0.2em;
+        margin: 0 0 1.5em;
+    }
+
+    .star {
+        width: 30rem;
+        margin: 0 auto .5em; 
+    }
+
+    .star > img {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin: 0 .5em 0 .8em;
+    }
+
+
+    .startQuizzBtn {
+        margin: 1em 0 0 0;
+        padding: 1.6em 1.5em;
+    }
+
+    /* Questions */
+
+    .quizzContainer {
+        margin: 2em auto;
+        width: 90%;
+        font-size: 25px;
+    }
+
+    /* Answers Container */
+    .answer {
+        padding: 0.2em 1em;
+        cursor: pointer;
+        font-size: 22px;
+    }
+
+    .answersContainer > p {
+        margin: 0.5em 0.5em 0 0;
+    }
+    
+    button {
+        margin: 1em auto;
+    }
+
+    /* End game */
+
+    .endGame {
+        display: block;
+        text-align: center;
+        margin : 2em 0;
+    }
+
+    .endGameText {
+        font-weight: bold;
+        font-size: 25px;
+        padding: 0 2em;
+    }
+
+    .buttonsDiv {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttonsDiv > button {
+        margin: 1em;
+        padding: 1.5em 1.5em;
+        font-size: 1.5rem;
+    }
+
+}
+    
+
